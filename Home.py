@@ -1,6 +1,7 @@
 import streamlit as st
 from Fonction import *
 from PIL import Image
+from Authentification import *
 
 
 # Configuration de la page
@@ -10,6 +11,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+#import_users_from_excel()
 
 load_all_data()
 etudiants_df=st.session_state.etudiants_df
@@ -25,6 +28,7 @@ Connect_df=st.session_state.Connect_df
 
 
 versements_df["Montant"]=versements_df["Montant"].astype(int)
+
 
 # CSS personnalisé pour un design moderne
 st.markdown("""
