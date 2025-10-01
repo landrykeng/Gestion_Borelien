@@ -14,7 +14,7 @@ from functools import lru_cache
 import json
 
 st.session_state.data_loaded = False
-version="local"  # "local" or "online"
+version="online"  # "local" or "online"
 SERVICE_ACCOUNT_FILE = st.secrets["gcp_service_account"] if version=="online" else  "Credential.json"
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
